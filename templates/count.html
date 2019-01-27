@@ -1,0 +1,10 @@
+<!-- use this link https://docs.djangoproject.com/en/2.2/ref/templates/language/ to refer for django template language -->
+<h1>There are {{count}} words in the text.</h1>
+<a href="{% url "home" %}">start calculation again</a>
+<h2>The text you entered:</h2>
+{{ fulltext }} <!-- we use double braces to access python variables -->
+<h1>The word dictionary</h1>
+
+{% for word, counttotal in dic.items%} <!-- you should not use () and for loop works only for arrays-->
+{{ word }} : {{ counttotal }}
+{% endfor %}
